@@ -1,0 +1,45 @@
+{
+  "name": "dsh-plugin-catalog",
+  "version": "0.10.6",
+  "type": "module",
+  "description": "把 profile 里声明的每个插件列成可读清单：作用、怎么用、挂载项、README 用法、被调用次数与使用频率，并能在面板里就地检查更新、一键/选择性更新、启用停用、查看版本历史与回退、卸载、一键导出到桌面的 Word/PDF（选 PDF 时中间 Word 落在临时目录、转完就删，桌面只留一份 PDF），还给模型一个 plugin_catalog 工具与 /plugin-catalog 斜杠命令。新装的插件会自动补全作用与用法：现场识别斜杠命令与工具（含 defineTool 常量名），必要时用中文 README 首段补一句作用。",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "index.js",
+    "client.js",
+    "catalog.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "docx.js"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  },
+  "license": "MIT",
+  "author": "YangRui",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "plugin-catalog",
+    "plugin-list",
+    "usage-stats",
+    "export-docx",
+    "export-pdf"
+  ]
+}

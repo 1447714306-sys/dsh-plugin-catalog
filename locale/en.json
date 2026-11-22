@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Plugin catalog",
+    "description": "Explains what each installed plugin does and how to use it. Adds a fixed “Plugin catalog” panel in the left sidebar plus the plugin_catalog tool for the model.",
+    "detail": "docs/DETAIL.md"
+  }
+}
